@@ -25,8 +25,6 @@ async function getNews(country) {
 module.exports = async function() {
     var newsPromises = countries.map(getNews)
     return Promise.all(newsPromises).then(newsObjects => {
-        console.log(newsObjects);
-        
         return [].concat.apply([],newsObjects)
     })
 }
