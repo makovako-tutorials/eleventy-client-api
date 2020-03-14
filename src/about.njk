@@ -1,0 +1,13 @@
+---
+title: About
+layout: base.njk
+---
+
+<div class="container">
+   <h1>This page was made for you</h1>
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis reiciendis sed, necessitatibus inventore quisquam debitis numquam vero rem alias odit!</p>
+</div>
+
+{% for item in news %}
+   <a href="/{{item.country}}">{{item.country}}</a>
+{% endfor %}
