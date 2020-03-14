@@ -10,8 +10,9 @@ function success(pos){
             document.getElementById('temp').innerText = data.main.temp + '°C'
             document.getElementById('main').innerText = data.weather[0].main
             document.getElementById('desc').innerText = data.weather[0].description
+            document.getElementById('weather').classList.remove('hidden')
         })
-    console.log(`${crd.latitude} ${crd.longitude} ${crd.accuracy}`);
+    
 }
 
 function error(err){
@@ -21,5 +22,4 @@ function error(err){
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error)
-    document.getElementById('weather').classList.remove('hidden')
 }
